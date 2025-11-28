@@ -1,0 +1,10 @@
+var heightChecker = function (heights) {
+    let count = 0;
+    let expectedArray = [...heights].sort((a, b) => a - b);
+    for (let i = 0; i < heights.length; i++) {
+        expectedArray[i] !== heights[i] ? count++ : count;
+    }
+    return count
+};
+
+console.log(heightChecker([1, 1, 4, 2, 1, 3]))
